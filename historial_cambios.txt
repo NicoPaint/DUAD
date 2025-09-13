@@ -1,2 +1,2 @@
-Este archivo va a guardar el historial de todos los arhcivos de este repocitorio:
+Este archivo va a guardar el historial de todos los archivos de este repositorio:
 
