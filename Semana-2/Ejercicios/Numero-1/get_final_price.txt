@@ -1,0 +1,17 @@
+Calcular precio final
+
+1. `Inicio`
+2. Definir `precioProducto`
+3. Definir `precioFinal`
+4. `precioProducto =` 0
+5. `precioFinal =` 0
+6. Mostrar `"Ingrese el precio del producto"`
+7. Pedir `precioProducto`
+8. `Si (` precioProducto ≥ 100`) entonces:`
+    1. `precioFinal = precioProducto` * 0.9
+9. `Sino:`
+    1. `precioFinal = precioProducto` * 0.98
+10. `FinSi`
+11. Mostrar `"Su precio final con descuento es:"`
+12. Mostrar `precioFinal.`
+13. `Fin`

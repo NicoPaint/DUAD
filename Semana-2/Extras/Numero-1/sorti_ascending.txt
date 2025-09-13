@@ -1,0 +1,20 @@
+Ordenar de menor a mayor
+
+1. `Inicio`
+2. Definir `primero`
+3. Definir `segundo`
+4. `primero =` 0
+5. `segundo =` 0
+6. Mostrar `"Ingrese los dos números que quiere ordenar"`
+7. Pedir `primero`
+8. Pedir `segundo`
+9. `Si (` primero ≤ segundo`) entonces:`
+    1. Mostrar `"Los número de menor a mayor son"`
+    2. Mostrar `primero`
+    3. Mostrar `segundo`
+10. `Sino:`
+    1. Mostrar `"Los número de menor a mayor son"`
+    2. Mostrar `segundo`
+    3. Mostrar `primero`
+11. `FinSi`
+12. `Fin`

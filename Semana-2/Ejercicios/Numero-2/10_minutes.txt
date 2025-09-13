@@ -1,0 +1,26 @@
+Definir que tal cerca o lejos esta el usuario de los 10 minutos
+
+1. `Inicio`
+2. Definir `tiempoSegundos`
+3. Definir `10minutosEnSegundos`
+4. Definir `segundosFaltantes`
+5. `tiempoSegundos =` 0
+6. `10minutosEnSegundos =` 600
+7. `segundosFaltantes =` 0
+8. Mostrar `"Ingrese su tiempo en segundos"`
+9. Pedir `tiempoSegundos`
+10. `Si (` tiempoSegundos > 600`) entonces:`
+    1. Mostrar `"Su tiempo en segundos es "`
+    2. Mostrar `"Mayor"`
+    3. Mostrar `" a diez minutos"`
+11. `Si (` tiempoSegundos == 600`) entonces:`
+    1. Mostrar `"Su tiempo en segundos es "`
+    2. Mostrar `"Igual"`
+    3. Mostrar `" a diez minutos"`
+12. `Sino:`
+    1. `segundosFaltantes = 10minutosEnSegundos - tiempoSegundos`
+    2. Mostrar `"Te faltan "`
+    3. Mostrar `segundosFaltantes`
+    4. Mostrar `" segundos para llegar a los diez minutos"`
+13. `FinSi`
+14. `Fin`

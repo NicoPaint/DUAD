@@ -1,0 +1,27 @@
+Calcular promedio de hombres y mujeres
+
+1. `Inicio`
+2. Definir `sexoPersonas`
+3. Definir `sumaHombres`
+4. Definir `sumaMujeres`
+5. Definir `sumaTotal`
+6. Definir `contador`
+7. `sexoPersonas =` 0
+8. `sumaHombres =` 0
+9. `sumaMujeres =` 0
+10. `sumaTotal =` 6
+11. `contador =` 0
+12. `Mientras (` contador < sumaTotal `) repetir:`
+    1. Mostrar `"Ingresar el sexo de la persona, 1 para mujer y 2 para hombre"`
+    2. Pedir `sexoPersonas`
+    3. `Si (` sexoPersonas == 1`) entonces:`
+        1. `sumaMujeres = sumaMujeres + 1`
+    4. `Si (` sexoPersonas == 2`) entonces:`
+        1. `sumaHombres = sumaHombres + 1`
+    5. `contador = contador + 1`
+13. `FinMientras`
+14. Mostrar `"El promedio de hombres y mujeres es: "` 
+15. Mostrar `sumaMujeres/sumaTotal * 100 + " Mujeres"`
+16. Mostrar `" Y "`
+17. Mostrar `sumaHombres/sumaTotal * 100 + " Hombres"`
+18. `Fin`
