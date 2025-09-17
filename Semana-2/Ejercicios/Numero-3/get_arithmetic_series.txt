@@ -1,0 +1,14 @@
+Calcular la serie aritmetica de un número
+
+1. `Inicio`
+2. Definir `numeroSerie`
+3. Definir `sumaFinal`
+4. `numeroSerie =` 0
+5. `sumaFinal =` 0
+6. Mostrar `"Ingrese el numero que quiera sumar"`
+7. Pedir `numeroSerie`
+8. `sumaFinal = numeroSerie * (numeroSerie + 1) / 2` 
+9. Mostrar `"La serie aritmetica del número que ingresaste es: "`
+10. Mostrar `sumaFinal`
+11. `FinSi`
+12. `Fin`

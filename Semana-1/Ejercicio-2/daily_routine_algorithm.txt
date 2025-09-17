@@ -1,0 +1,86 @@
+1. Inicio.
+2. Levantarse
+3. Apagar la alarma
+4. Tomar la ropa para el gimnasio
+5. Ir al baño a alistarme
+6. Si tengo tiempo suficiente para entrenar:
+    1. Tomar las llaves del carro
+    2. Manejar hasta el gimnasio
+    3. Registrarme en la recepción
+    4. Entrar al gimnasio
+7. Sino:
+    1. Ir al gimnasio del edificio.
+        1. Bajar al primer piso.
+        2. Ir a la zona social.
+        3. Entrar al gimnasio.
+8. Decidir que entrenar ese día
+    1. Si es Lunes:
+        1. Entrenar piernas (cuadriceps).
+    2. Si es Martes
+        1. Entrenar pecho y triceps.
+    3. Si es Miércoles
+        1. Entrenar piernas (isquios y gluteos).
+    4. Si es Jueves
+        1. Entrenar espalda y biceps.
+    5. Si es Viernes
+        1. Entrenar hombros y abs.
+    6. Si es Sábado
+        1. Hacer cardio.
+9. Hacer mi rutina
+    1. Por cada ejercicio
+        1. Hacer 3 series de 10 repeticiones cada una.
+10. Regresar al apartamento
+11. Alistarme para ir a trabajar
+    1. Bañarme
+    2. Cambiarme
+    3. Empacar mi comida del día
+    4. Hacer mi café
+12. Despedirme de mi esposa
+13. Salir del apartamento
+14. Subirme al carro
+15. Prender el carro
+16. Si voy a tiempo y tengo ganas:
+    1. Conecto mi celular al carro
+    2. Pongo música
+17. Sino:
+    1. Escucho la radio.
+18. Llego al trabajo
+19. Me registró en el sistema
+20. Prendo mi computador
+21. Reviso mis correos sin leer
+    1. Si aparece algún mensaje urgente o importante:
+        1. Respondo inmediatamente
+    2. Sino:
+        1. Respondo después
+22. Reviso mi lista de pendientes
+23. Mientras este en mi horario laboral
+    1. Ejecuto mis pendientes de mayor a menor importancia
+24. Registro mi salida de la oficina
+25. Salgo del edificio
+26. Subirme al carro
+27. Prender el carro
+28. Si mi esposa necesita algo:
+    1. Manejo al lugar donde lo puedo conseguir
+    2. Lo compro
+    3. Manejo hasta mi casa
+29. Sino:
+    1. Manejo hasta mi casa
+30. Parqueo el carro
+31. Camino hasta mi casa
+32. Entro al apartamento
+33. Saludo a mi esposa
+    1. Si ella me pidió algo y se lo conseguí
+        1. Le entrego su pedido
+    2. Sino me pidio nada pero le traje algo
+        1. Le entrego su sorpresa
+34. Me siento a estudiar programación
+35. Mientras tengo tiempo
+    1. Avanzo lo que mas pueda en mis estudios
+36. Organizo la ropa de gimnasio del otro día
+37. Me alisto para dormir
+    1. Organizo la cocina
+    2. Me lavo los dientes
+    3. Me pongo la pijama
+    4. Configuro la alarma para el otro día.
+38. Me acuesto a dormir
+39. Fin.

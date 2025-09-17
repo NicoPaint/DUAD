@@ -1,0 +1,5 @@
+print(1 + 4)
+print(1 + 1)
+print(90 + 430)
+print(5 * 4)
+print(5 / 4)

@@ -1,0 +1,71 @@
+1. Inicio.
+2. Decidir en que dispositivo ver el video.
+    1. Si quiero verlo en el mi celular:
+        1. Desbloquear el celular.
+        2. Buscar la app de YouTube en mi menú.
+        3. Abrir la app de YouTube.
+            1. Si abrió:
+                1. Buscar la barra de búsqueda.
+                2. Dar click en la barra.
+                3. Mientras no haya encontrado el video:
+                    1. Escribir el nombre o palabra clave del video
+                    2. Mirar los resultados de la búsqueda
+                        1. Por cada resultado, hasta el sexto de ellos:
+                            1. Mirar el titulo
+                            2. Mirar el thumbnail
+                                1. Si es la opcion que buscaba:
+                                    1. Dar click en el
+                                    2. Ver el video
+                                    3. Fin.
+                                2. Sino:
+                                    1. pasar al siguiente
+            2. Sino:
+                1. Cerrar la app.
+                2. Volverla a abrir
+    2. Sino, quiero verlo en el computador:
+        1. Desbloquear el computador.
+        2. Abrir el navegador.
+        3. Dar click en la barra de búsqueda
+        4. Escribir Youtube.com
+        5. Abrir la página web de YouTube
+            1. Si abrió:
+                1. Buscar la barra de búsqueda.
+                2. Dar click en la barra.
+                3. Mientras no haya encontrado el video:
+                    1. Escribir el nombre o palabra clave del video
+                    2. Mirar los resultados de la búsqueda
+                        1. Por cada resultado, hasta el sexto de ellos:
+                            1. Mirar el titulo
+                            2. Mirar el thumbnail
+                                1. Si es la opcion que buscaba:
+                                    1. Dar click en el
+                                    2. Ver el video
+                                    3. Fin.
+                                2. Sino:
+                                    1. pasar al siguiente
+            2. Sino:
+                1. Cerrar la app.
+                2. Volverla a abrir
+    3. Sino, quiero verlo en el TV:
+        1. Desbloquear el TV.
+        2. Buscar la app de YouTube en mi menú.
+        3. Abrir la app de YouTube.
+            1. Si abrió:
+                1. Buscar la barra de búsqueda.
+                2. Dar click en la barra.
+                3. Mientras no haya encontrado el video:
+                    1. Escribir el nombre o palabra clave del video
+                    2. Mirar los resultados de la búsqueda
+                        1. Por cada resultado, hasta el sexto de ellos:
+                            1. Mirar el titulo
+                            2. Mirar el thumbnail
+                                1. Si es la opcion que buscaba:
+                                    1. dar Click en el
+                                    2. Ver el video
+                                    3. Fin.
+                                2. Sino:
+                                    1. pasar al siguiente
+            2. Sino:
+                1. Cerrar la app.
+                2. Volverla a abrir
+3. Fin.

@@ -1,0 +1,13 @@
+Convertir km/h a m/s
+
+1. `Inicio`
+2. Definir `velocidadKmporH`
+3. Definir `velocidadMporS`
+4. `velocidadKmporH =` 0
+5. `velocidadMporS =` 0
+6. Mostrar `"Ingrese su veloidad en Km/h"`
+7. Pedir `velocidadKmporH`
+8. `velocidadMporS = velocidadKmporH *` 1000 / 3600
+9. Mostrar `"Su veloidad en m/s es: "`
+10. Mostrar `velocidadMporS`
+11. `Fin`
