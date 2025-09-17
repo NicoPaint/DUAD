@@ -1,0 +1,44 @@
+Este archivo va a guardar el historial de todos los archivos de este repositorio.
+
+Los últimos 5 commits fueron:
+
+1.  commit 767f8cb85da27b5bd4175d79c114150917d33710 (origin/main, main)
+    Author: NicoPaint <felipepinve@gmail.com>
+    Date:   Fri Sep 12 08:57:35 2025 -0500
+
+    message: First commit
+    ¿Que cambió?: N/A 
+
+    ¿Porque se hizo? Para inicializar el repositorio de git en local
+
+2.  commit d30e162a04f7bfd1632cdbd4d94e1fd76a108c1d (origin/past-exercises)
+    Author: NicoPaint <felipepinve@gmail.com>
+    Date:   Fri Sep 12 21:56:41 2025 -0500
+
+    message: Add: All previous exercises since week 1 to week 8
+    ¿Que cambió?: Se agregaron los todos los ejercicios de la semanas anteriores al repositorio 
+    ¿Porque se hizo? Para hacer seguimiento a los cambios de esos archivos tambien
+
+3.  commit 7cf32f1c2af8351a6e80a3b40b9c7b90224216bc (past-exercises)
+    Author: NicoPaint <felipepinve@gmail.com>
+    Date:   Fri Sep 12 22:09:42 2025 -0500
+
+    message: Add: created the changes history file
+    ¿Que cambió?: se agregó el archivo historial_cambios.txt
+    ¿Porque se hizo? Para registrar los cambios hechos a los archivos del repositorio
+
+4.  commit 51a9b75e63f35239950589f97f5684d12d118f73 (origin/experimentacion, experimentacion)
+    Author: NicoPaint <felipepinve@gmail.com>
+    Date:   Fri Sep 12 22:13:00 2025 -0500
+
+    message: Add: prueba.txt file on week 9 folder
+    ¿Que cambió?: se agregó una nueva carperta con su correspodiente archivo
+    ¿Porque se hizo? Para registrar el trabajo de la semana 9
+
+5.  commit b567727fbb0c83a3f38e308b1c9ccf502efa35b9 (HEAD -> fix-errores-menores, origin/fix-errores-menores)
+    Author: NicoPaint <felipepinve@gmail.com>
+    Date:   Fri Sep 12 22:17:48 2025 -0500
+
+    message: Fix: I fixed some grammatical errors in historial_cambios.txt file
+    ¿Que cambió?: un par de palabras del archivo historial_cambios.txt
+    ¿Porque se hizo? Para corregir unos errores gramaticales
