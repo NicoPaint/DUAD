@@ -14,12 +14,34 @@ def calculate_average(notes_list):
     return sum(notes_list)/len(notes_list)
 
 
+def is_a_float(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+
+
 def is_valid_name(name):
     print("valid name")
 
 
 def is_valid_section(section):
     print("Valid section")
+
+
+def is_valid_grade(str_number):
+    while True:
+        if is_a_float(str_number):
+            number = float(str_number)
+            if number not in range(0, 101):
+                str_number = input("La opción que ingresaste no es valida, Ingrese un número del 0 al 100: ")
+                continue
+            else:
+                return number
+        else:
+            str_number = input("La opción que ingresaste no es valida, Ingrese un número del 0 al 100: ")
+            continue
 
 
 def student_exists(name, section):
@@ -33,10 +55,10 @@ def enter_students_info(students):
         print(f"Por favor ingrese la información del estudiante número {counter}:")
         student_name = input("Nombre completo: ").strip()
         student_section = input("Sección: ").strip()
-        spanish_grade = float(input("Nota de Español: ").strip())
-        english_grade = float(input("Nota de Ingles: ").strip())
-        socials_grade = float(input("Nota de Sociales: ").strip())
-        science_grade = float(input("Nota de Ciencias: ").strip())
+        spanish_grade = is_valid_grade(input("Nota de Español: ").strip())
+        english_grade = is_valid_grade(input("Nota de Ingles: ").strip())
+        socials_grade = is_valid_grade(input("Nota de Sociales: ").strip())
+        science_grade = is_valid_grade(input("Nota de Ciencias: ").strip())
         student_avg = calculate_average([spanish_grade, english_grade, socials_grade, science_grade])
 
         student = {
