@@ -23,7 +23,24 @@ def is_a_float(string):
 
 
 def is_valid_name(name):
-    print("valid name")
+    is_a_valid_name = False
+
+    while not is_a_valid_name:
+        did_it_break = False
+
+        for letter in name:
+            if letter in [" ", "-"]:
+                continue
+            elif letter.isdigit() or not letter.isalnum():
+                did_it_break = True
+                break
+        
+        if did_it_break or name == "":
+            name = input("La opción que ingresaste no es valida, Ingrese un nombre que no tenga números, caracteres especiales o que no este vácio: ").strip()
+        else:
+            is_a_valid_name = True
+    
+    return name
 
 
 def is_valid_section(section):
@@ -53,7 +70,7 @@ def enter_students_info(students):
 
     while more_students:
         print(f"Por favor ingrese la información del estudiante número {counter}:")
-        student_name = input("Nombre completo: ").strip()
+        student_name = is_valid_name(input("Nombre completo: ").strip())
         student_section = input("Sección: ").strip()
         spanish_grade = is_valid_grade(input("Nota de Español: ").strip())
         english_grade = is_valid_grade(input("Nota de Ingles: ").strip())
