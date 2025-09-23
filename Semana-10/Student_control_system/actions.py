@@ -44,7 +44,34 @@ def is_valid_name(name):
 
 
 def is_valid_section(section):
-    print("Valid section")
+    while True:
+        if len(section) > 3:
+            section = input("La opción que ingresaste no es valida, Ingrese una sección entre 1 a 12 y A a F: ").strip().upper()
+            continue
+        else:
+            number = ""
+            letter = ""
+            for character in section:
+                if character.isdigit():
+                    number += character
+                elif character.isalpha:
+                    letter += character
+                else:
+                    section = input("La opción que ingresaste no es valida, Ingrese una sección entre 1 a 12 y A a F: ").strip().upper()
+                    continue
+
+            if number == "":
+                number = "0"
+            
+            if int(number) > 12 or int(number) < 1:
+                section = input("La opción que ingresaste no es valida, Ingrese una sección entre 1 a 12 y A a F: ").strip().upper()
+                continue
+
+            if letter not in ["A", "B", "C", "D", "E", "F"]:
+                section = input("La opción que ingresaste no es valida, Ingrese una sección entre 1 a 12 y A a F: ").strip().upper()
+                continue
+        
+            return section
 
 
 def is_valid_grade(str_number):
@@ -71,7 +98,7 @@ def enter_students_info(students):
     while more_students:
         print(f"Por favor ingrese la información del estudiante número {counter}:")
         student_name = is_valid_name(input("Nombre completo: ").strip())
-        student_section = input("Sección: ").strip()
+        student_section = is_valid_section(input("Sección: ").strip().upper())
         spanish_grade = is_valid_grade(input("Nota de Español: ").strip())
         english_grade = is_valid_grade(input("Nota de Ingles: ").strip())
         socials_grade = is_valid_grade(input("Nota de Sociales: ").strip())

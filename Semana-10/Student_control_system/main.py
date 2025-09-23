@@ -33,7 +33,7 @@ def start_student_control_system():
 
         user_action = menu_student_control_system()
     
-    print("Gracias por su tiempo, nos vemos una proxima vez")
+    print("Gracias por su tiempo, nos vemos una próxima vez")
 
 if __name__ == "__main__":
     try:
