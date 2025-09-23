@@ -22,6 +22,21 @@ def is_a_float(string):
         return False
 
 
+def format_name(name):
+    formated_name = ""
+    word = ""
+
+    for index, letter in enumerate(name):
+        word += letter
+        if letter in [" ", "-"]:
+            formated_name += word.capitalize()
+            word = ""
+        elif index == len(name) - 1:
+            formated_name += word.capitalize()
+    
+    return formated_name
+
+
 def is_valid_name(name):
     is_a_valid_name = False
 
@@ -40,7 +55,7 @@ def is_valid_name(name):
         else:
             is_a_valid_name = True
     
-    return name
+    return format_name(name)
 
 
 def is_valid_section(section):
@@ -88,8 +103,17 @@ def is_valid_grade(str_number):
             continue
 
 
-def student_exists(name, section):
-    print("Exist")
+def student_exists(name, section, students):
+    is_duplicated = False
+
+    for student in students:
+        if student["name"] == name and student["section"] == section:
+            print("El estudiante que ingresasté ya existe en la lista (no pueden haber estudiantes duplicados). Por favor intentalo nuevamente: \n")
+            is_duplicated = True
+            return is_duplicated
+    
+    return is_duplicated
+
 
 def enter_students_info(students):
     more_students = True
@@ -99,6 +123,10 @@ def enter_students_info(students):
         print(f"Por favor ingrese la información del estudiante número {counter}:")
         student_name = is_valid_name(input("Nombre completo: ").strip())
         student_section = is_valid_section(input("Sección: ").strip().upper())
+
+        if student_exists(student_name, student_section, students):
+            continue
+
         spanish_grade = is_valid_grade(input("Nota de Español: ").strip())
         english_grade = is_valid_grade(input("Nota de Ingles: ").strip())
         socials_grade = is_valid_grade(input("Nota de Sociales: ").strip())
