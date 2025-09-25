@@ -1,8 +1,8 @@
 def do_we_continue(phrase_to_show):
-    user_response = input(f"\n¿Desea continuar {phrase_to_show}? (Y/N): ").strip().upper()
+    user_response = input(f"\n¿{phrase_to_show}? (Y/N): ").strip().upper()
 
     while user_response not in ["Y", "N"]:
-        user_response = input(f"La opción que ingresaste no es valida, ¿Desea continuar {phrase_to_show}? (Y/N): ").strip().upper()
+        user_response = input(f"La opción que ingresaste no es valida, ¿{phrase_to_show}? (Y/N): ").strip().upper()
     print()
     
     return user_response
@@ -115,6 +115,23 @@ def student_exists(name, section, students):
     return is_duplicated
 
 
+def review_student_information_submitted(student):
+    is_information_correct = True
+
+    print("\nPor favor revisa la información que acabas de ingresar: \n")
+    for key, values in student.items():
+        if key == "average":
+            continue
+        
+        print(f"{key}: {values}")
+    
+    user_response = do_we_continue("Es la informacion del estudiante correcta")
+    if user_response == "N":
+        is_information_correct = False
+
+    return is_information_correct
+
+
 def enter_students_info(students):
     more_students = True
     counter = 1
@@ -145,10 +162,13 @@ def enter_students_info(students):
             "average": student_avg
         }
 
+        if not review_student_information_submitted(student):
+            continue
+
         students.append(student)
         counter += 1
 
-        other_student = do_we_continue("agregando estudiantes")
+        other_student = do_we_continue("Desea continuar agregando estudiantes")
         if other_student == "N":
             more_students = False
 

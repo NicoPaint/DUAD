@@ -27,7 +27,7 @@ def start_student_control_system():
             case "8":
                 actions.view_failed_students(students)
 
-        other_action = actions.do_we_continue("con otra acción")
+        other_action = actions.do_we_continue("Desea continuar con otra acción")
         if other_action == "N":
             break
 
