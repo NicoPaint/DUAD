@@ -107,7 +107,7 @@ def student_exists(name, section, students):
     is_duplicated = False
 
     for student in students:
-        if student["name"] == name and student["section"] == section:
+        if student["Nombre"] == name and student["Sección"] == section:
             print("El estudiante que ingresasté ya existe en la lista (no pueden haber estudiantes duplicados). Por favor intentalo nuevamente: \n")
             is_duplicated = True
             return is_duplicated
@@ -120,9 +120,9 @@ def review_student_information_submitted(student):
 
     print("\nPor favor revisa la información que acabas de ingresar: \n")
     for key, values in student.items():
-        if key == "average":
+        if key == "Promedio":
             continue
-        
+
         print(f"{key}: {values}")
     
     user_response = do_we_continue("Es la informacion del estudiante correcta")
@@ -136,6 +136,7 @@ def enter_students_info(students):
     more_students = True
     counter = 1
 
+    print("-" * 70)
     while more_students:
         print(f"Por favor ingrese la información del estudiante número {counter}:")
         student_name = is_valid_name(input("Nombre completo: ").strip())
@@ -151,15 +152,15 @@ def enter_students_info(students):
         student_avg = calculate_average([spanish_grade, english_grade, socials_grade, science_grade])
 
         student = {
-            "name": student_name,
-            "section": student_section,
-            "grades": {
-                "Spanish": spanish_grade,
-                "English": english_grade,
-                "Socials": socials_grade,
-                "Sciences": science_grade
+            "Nombre": student_name,
+            "Sección": student_section,
+            "Notas": {
+                "Español": spanish_grade,
+                "Ingles": english_grade,
+                "Sociales": socials_grade,
+                "Ciencias": science_grade
             },
-            "average": student_avg
+            "Promedio": student_avg
         }
 
         if not review_student_information_submitted(student):
@@ -177,7 +178,23 @@ def enter_students_info(students):
 
 
 def view_all_students_info(students):
-    print("Ver información de todos los estudiantes")
+    print("-" * 70)
+    print("Aqui esta la informacion de todos los estudiantes:\n")
+    print(f"Estudiantes totales: {len(students)}\n")
+    print("-" * 25)
+
+    for index, student in enumerate(students):
+        print(f"Estudiante número {index + 1}")
+        for key, value in student.items():
+            if key == "Notas":
+                print(f"{key}: ")
+                for subject, grade in student[key].items():
+                    print(f"\t{subject}: {grade}")
+            else:
+                print(f"{key}: {value}")
+        print("-" * 25)
+        print()
+
 
 
 def view_top_3_students_info(students):
