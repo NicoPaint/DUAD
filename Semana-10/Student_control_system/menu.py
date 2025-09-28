@@ -12,10 +12,10 @@ def menu_student_control_system():
     "8. Mostrar estudiantes reprobados.\n" \
     "9. Salir de programa.\n" \
     "\n" \
-    "Por favor escribe el número de la acción: ")
+    "Por favor escribe el número de la acción: ").strip()
     print()
 
     while user_choice not in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
-        user_choice = input("La opción que ingresaste no es valida, por favor vuelve a ingresarla: ")
+        user_choice = input("La opción que ingresaste no es valida, por favor vuelve a ingresarla: ").strip()
 
     return user_choice
