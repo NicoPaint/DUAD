@@ -132,6 +132,14 @@ def review_student_information_submitted(student):
     return is_information_correct
 
 
+def is_students_list_empty(students):
+    if not students:
+        print("No hay información de los estudiantes aún. Por favor ingresala o importala desde el menú principal")
+        return True
+    else:
+        return False
+
+
 def enter_students_info(students):
     more_students = True
     counter = 1
@@ -178,6 +186,10 @@ def enter_students_info(students):
 
 
 def view_all_students_info(students):
+
+    if is_students_list_empty(students):
+        return
+
     print("-" * 70)
     print("Aqui esta la informacion de todos los estudiantes:\n")
     print(f"Estudiantes totales: {len(students)}\n")
@@ -196,9 +208,42 @@ def view_all_students_info(students):
         print()
 
 
+def sorted_by_average(student):
+    return student["Promedio"]
+
 
 def view_top_3_students_info(students):
-    print("Ver información de los 3 mejores estudiantes")
+
+    if is_students_list_empty(students):
+        return
+
+    if len(students) >= 3:
+        message = "de los 3 mejores estudiantes"
+    elif len(students) == 2:
+        message = "de los 2 mejores estudiantes"
+    else:
+        message = "del mejor estudiante"
+
+    print("-" * 70)
+    print(f"Aqui esta la informacion {message}:\n")
+    print("-" * 25)
+
+    sorted_students = students.copy()
+    sorted_students.sort(key = sorted_by_average, reverse = True)
+
+    for index, student in enumerate(sorted_students):
+        if index == 3:
+            break
+        print(f"Estudiante número {index + 1}")
+        for key, value in student.items():
+            if key == "Notas":
+                print(f"{key}: ")
+                for subject, grade in student[key].items():
+                    print(f"\t{subject}: {grade}")
+            else:
+                print(f"{key}: {value}")
+        print("-" * 25)
+        print()
 
 
 def view_students_avg_grade(students):
