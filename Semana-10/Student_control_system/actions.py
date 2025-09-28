@@ -188,7 +188,7 @@ def enter_students_info(students):
 def view_all_students_info(students):
 
     if is_students_list_empty(students):
-        return
+        return []
 
     print("-" * 70)
     print("Aqui esta la informacion de todos los estudiantes:\n")
@@ -215,7 +215,7 @@ def sorted_by_average(student):
 def view_top_3_students_info(students):
 
     if is_students_list_empty(students):
-        return
+        return []
 
     if len(students) >= 3:
         message = "de los 3 mejores estudiantes"
@@ -249,7 +249,7 @@ def view_top_3_students_info(students):
 def view_students_avg_grade(students):
     
     if is_students_list_empty(students):
-        return
+        return []
     
     students_average_list = [student["Promedio"] for student in students]
     overall_average = round(calculate_average(students_average_list), 2)
@@ -263,7 +263,49 @@ def view_students_avg_grade(students):
 
 
 def delete_student(students):
-    print("Eliminar estudiante")
+    
+    if is_students_list_empty(students):
+        return []
+    
+    is_input_correct = False
+
+    while not is_input_correct:
+        student_name = is_valid_name(input("Ingrese el nombre del estudiante que desea eliminar de la lista: ").strip())
+        student_section = is_valid_section(input("Ahora ingrese la sección a la que pertenece: ").strip().upper())
+
+        print("\nEsta fue la información que ingresó:\n")
+        print(f"\tNombre: {student_name}")
+        print(f"\tSección: {student_section}")
+
+        user_reply = do_we_continue("Desea continuar con esta información")
+        if user_reply == "Y":
+            is_input_correct = True
+
+    student_to_delete = [student for student in students if student["Nombre"] == student_name and student["Sección"] == student_section]
+
+    if not student_to_delete:
+        print("El estudiante que ingresasté no aparece en el sistema. Asegurate que el nombre y la sección esten bien escritas, e intentalo nuevamente")
+        return students
+    
+    print(f"Aqui esta la información del estudiante que se encontró en el sistema:\n")
+    for student in student_to_delete:
+        for key, value in student.items():
+            if key == "Notas":
+                print(f"{key}: ")
+                for subject, grade in student[key].items():
+                    print(f"\t{subject}: {grade}")
+            else:
+                print(f"{key}: {value}")
+    
+    user_confirmation = do_we_continue("Esta seguro/a de que quiere eliminar este estudiante del sistema")
+
+    if user_confirmation == "Y":
+        student_index = [index for index, student in enumerate(students) if student == student_to_delete[0]]
+        students.pop(student_index[0])
+        print("¡El estudiante ha sido eliminado exitosamente de la lista!")
+    else:
+        print("El estudiante NO ha sido eliminado del sistema")
+
     return students
 
 
