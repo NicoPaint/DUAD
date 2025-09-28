@@ -247,7 +247,19 @@ def view_top_3_students_info(students):
 
 
 def view_students_avg_grade(students):
-    print("Ver nota promedio de todos los estudiantes")
+    
+    if is_students_list_empty(students):
+        return
+    
+    students_average_list = [student["Promedio"] for student in students]
+    overall_average = round(calculate_average(students_average_list), 2)
+
+    print("-" * 70)
+    print()
+    print(f"El promedio general de todos los estudiantes es: {overall_average}")
+    print()
+    print("-" * 70)
+
 
 
 def delete_student(students):
