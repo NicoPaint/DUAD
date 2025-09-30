@@ -328,4 +328,40 @@ def delete_student(students):
 
 
 def view_failed_students(students):
-    print("Ver estudiantes reprobados")
+    if is_students_list_empty(students):
+        return []
+    
+    failed_students = []
+
+    for student in students:
+        for key in student.keys():
+            if key == "Notas":
+                for grade in student[key].values():
+                    if grade < 60:
+                        failed_students.append(student)
+                        break
+        
+    if failed_students:
+        print("-" * 70)
+        print("Aqui esta la informacion de todos los estudiantes que reprobaron al menos una materia:\n")
+
+
+        print(f"Estudiantes totales: {len(failed_students)}\n")
+        print("-" * 25)
+
+        for index, student in enumerate(failed_students):
+            print(f"Estudiante número {index + 1}")
+            for key, value in student.items():
+                if key == "Notas":
+                    print("Materias reprobadas: \n")
+                    for subject, grade in student[key].items():
+                        if grade < 60:
+                            print(f"\t{subject}: {grade}")
+                elif key != "Promedio":
+                    print(f"{key}: {value}")
+            print("-" * 25)
+            print()
+    else:
+        print("-" * 70)
+        print()
+        print("Ninguno de los estudiantes reprobó al menos una materia:\n")
