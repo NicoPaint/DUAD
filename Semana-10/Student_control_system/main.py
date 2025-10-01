@@ -19,9 +19,9 @@ def start_student_control_system():
             case "4":
                 actions.view_students_avg_grade(students)
             case "5":
-                data.export_students_data("test", students)
+                data.export_students_data(students)
             case "6":
-                students = data.import_students_data("test")
+                students = data.import_students_data()
             case "7":
                 students = actions.delete_student(students)
             case "8":
