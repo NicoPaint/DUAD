@@ -140,6 +140,21 @@ def is_students_list_empty(students):
         return False
 
 
+def empty_students_list(students):
+    
+    if is_students_list_empty(students):
+        return []
+
+    user_empting_confirmation = do_we_continue("Desea eliminar todos los estudiantes en la lista")
+    if user_empting_confirmation == "Y":
+        students.clear()
+        print("\nLos estudiantes han sido eliminados de la lista actual")
+    else:
+        print("\nLos estudiantes NO han sido eliminados de la lista actual")
+    
+    return students
+
+
 def enter_students_info(students):
     more_students = True
     counter = 1
@@ -259,7 +274,6 @@ def view_students_avg_grade(students):
     print(f"El promedio general de todos los estudiantes es: {overall_average}")
     print()
     print("-" * 70)
-
 
 
 def delete_student(students):

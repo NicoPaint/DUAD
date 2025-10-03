@@ -71,6 +71,9 @@ def export_students_data(students_data):
     
     print(f"La información de los estudiantes ha sido exportada con exito al archivo {file_name}.csv en la ruta {file_path}")
 
+    
+    return actions.empty_students_list(students_data)
+
 
 def import_students_data(students_data):
     file_name = validate_csv_file_name("importar")

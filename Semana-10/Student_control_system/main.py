@@ -8,7 +8,7 @@ def start_student_control_system():
     print("Bienvenido al sistema de control de estudiantes\n")
     user_action = menu_student_control_system()
 
-    while int(user_action) in range(1, 9):
+    while int(user_action) in range(1, 10):
         match user_action:
             case "1":
                 students = actions.enter_students_info(students)
@@ -19,12 +19,14 @@ def start_student_control_system():
             case "4":
                 actions.view_students_avg_grade(students)
             case "5":
-                data.export_students_data(students)
+                students = data.export_students_data(students)
             case "6":
                 students = data.import_students_data(students)
             case "7":
                 students = actions.delete_student(students)
             case "8":
+                students = actions.empty_students_list(students)
+            case "9":
                 actions.view_failed_students(students)
 
         other_action = actions.do_we_continue("Desea continuar con otra acción")

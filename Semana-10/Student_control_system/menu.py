@@ -9,13 +9,14 @@ def menu_student_control_system():
     "5. Exportar todos los datos actuales a un CSV.\n" \
     "6. Importar todos los datos de un CSV previamente guardado.\n" \
     "7. Eliminar a un estudiante.\n" \
-    "8. Mostrar estudiantes reprobados.\n" \
-    "9. Salir de programa.\n" \
+    "8. Eliminar a todos los estudiantes.\n" \
+    "9. Mostrar estudiantes reprobados.\n" \
+    "10. Salir de programa.\n" \
     "\n" \
     "Por favor escribe el número de la acción: ").strip()
     print()
 
-    while user_choice not in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+    while user_choice not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']:
         user_choice = input("La opción que ingresaste no es valida, por favor vuelve a ingresarla: ").strip()
 
     return user_choice
