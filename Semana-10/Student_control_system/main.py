@@ -21,7 +21,7 @@ def start_student_control_system():
             case "5":
                 data.export_students_data(students)
             case "6":
-                students = data.import_students_data()
+                students = data.import_students_data(students)
             case "7":
                 students = actions.delete_student(students)
             case "8":
