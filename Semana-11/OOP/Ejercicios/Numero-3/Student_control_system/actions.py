@@ -253,7 +253,7 @@ def view_students_avg_grade(students):
     if is_students_list_empty(students):
         return []
     
-    students_average_list = [student["Promedio"] for student in students]
+    students_average_list = [student.average for student in students]
     overall_average = round(calculate_average(students_average_list), 2)
 
     print("-" * 70)
