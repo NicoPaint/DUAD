@@ -217,7 +217,7 @@ def view_all_students_info(students):
 
 
 def sorted_by_average(student):
-    return student["Promedio"]
+    return student.average
 
 
 def view_top_3_students_info(students):
@@ -243,13 +243,7 @@ def view_top_3_students_info(students):
         if index == 3:
             break
         print(f"Estudiante número {index + 1}")
-        for key, value in student.items():
-            if key == "Notas":
-                print(f"{key}: ")
-                for subject, grade in student[key].items():
-                    print(f"\t{subject}: {grade}")
-            else:
-                print(f"{key}: {value}")
+        print(student)
         print("-" * 25)
         print()
 
