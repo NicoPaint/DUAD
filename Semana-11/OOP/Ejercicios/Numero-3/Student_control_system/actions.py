@@ -1,3 +1,5 @@
+from Student import Student
+
 def do_we_continue(phrase_to_show):
     user_response = input(f"\n¿{phrase_to_show}? (Y/N): ").strip().upper()
 
@@ -107,7 +109,7 @@ def student_exists(name, section, students):
     is_duplicated = False
 
     for student in students:
-        if student["Nombre"] == name and student["Sección"] == section:
+        if student.name == name and student.section == section:
             print("El estudiante que ingresasté ya existe en la lista (no pueden haber estudiantes duplicados). Por favor intentalo nuevamente: \n")
             is_duplicated = True
             return is_duplicated
@@ -119,11 +121,7 @@ def review_student_information_submitted(student):
     is_information_correct = True
 
     print("\nPor favor revisa la información que acabas de ingresar: \n")
-    for key, values in student.items():
-        if key == "Promedio":
-            continue
-
-        print(f"{key}: {values}")
+    print(student)
     
     user_response = do_we_continue("Es la informacion del estudiante correcta")
     if user_response == "N":
@@ -174,7 +172,7 @@ def enter_students_info(students):
         science_grade = is_valid_grade(input("Nota de Ciencias: ").strip())
         student_avg = calculate_average([spanish_grade, english_grade, socials_grade, science_grade])
 
-        student = {
+        """ student = {
             "Nombre": student_name,
             "Sección": student_section,
             "Notas": {
@@ -184,7 +182,9 @@ def enter_students_info(students):
                 "Ciencias": science_grade
             },
             "Promedio": student_avg
-        }
+        } """
+
+        student = Student(student_name, student_section, spanish_grade, english_grade, socials_grade, science_grade, student_avg)
 
         if not review_student_information_submitted(student):
             continue
@@ -196,7 +196,6 @@ def enter_students_info(students):
         if other_student == "N":
             more_students = False
 
-    print(students)
     return students
 
 
