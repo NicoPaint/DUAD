@@ -22,3 +22,11 @@ class Student:
             Ciencias: {self.grades["Ciencias"]}
         Promedio: {self.average}
         """
+    
+    def show_failed_subjects(self):
+        print(f"Nombre: {self.name}")
+        print(f"Sección: {self.section}")
+        print("Materias reprobadas:")
+        for subject, grade in self.grades.items():
+            if grade < 60:
+                print(f"\t{subject}: {grade}")

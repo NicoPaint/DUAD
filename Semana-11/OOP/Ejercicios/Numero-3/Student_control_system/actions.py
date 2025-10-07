@@ -329,12 +329,10 @@ def view_failed_students(students):
     failed_students = []
 
     for student in students:
-        for key in student.keys():
-            if key == "Notas":
-                for grade in student[key].values():
-                    if grade < 60:
-                        failed_students.append(student)
-                        break
+        for grade in student.grades.values():
+            if grade < 60:
+                failed_students.append(student)
+                break
         
     if failed_students:
         print("-" * 70)
@@ -346,14 +344,7 @@ def view_failed_students(students):
 
         for index, student in enumerate(failed_students):
             print(f"Estudiante número {index + 1}")
-            for key, value in student.items():
-                if key == "Notas":
-                    print("Materias reprobadas: \n")
-                    for subject, grade in student[key].items():
-                        if grade < 60:
-                            print(f"\t{subject}: {grade}")
-                elif key != "Promedio":
-                    print(f"{key}: {value}")
+            student.show_failed_subjects()
             print("-" * 25)
             print()
     else:
