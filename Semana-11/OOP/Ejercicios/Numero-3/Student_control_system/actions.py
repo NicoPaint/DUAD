@@ -286,7 +286,7 @@ def delete_student(students):
             if user_info_confirmation == "Y":
                 is_input_correct = True
 
-        student_to_delete = [student for student in students if student["Nombre"] == student_name and student["Sección"] == student_section]
+        student_to_delete = [student for student in students if student.name == student_name and student.section == student_section]
 
         if not student_to_delete:
             print("El estudiante que ingresasté no aparece en el sistema. Asegurate que el nombre y la sección esten bien escritas, e intentalo nuevamente")
@@ -298,13 +298,7 @@ def delete_student(students):
         
         print(f"Aqui esta la información del estudiante que se encontró en el sistema:\n")
         for student in student_to_delete:
-            for key, value in student.items():
-                if key == "Notas":
-                    print(f"{key}: ")
-                    for subject, grade in student[key].items():
-                        print(f"\t{subject}: {grade}")
-                else:
-                    print(f"{key}: {value}")
+            print(student)
         
         user_deleting_confirmation = do_we_continue("Esta seguro/a de que quiere eliminar este estudiante del sistema")
 
