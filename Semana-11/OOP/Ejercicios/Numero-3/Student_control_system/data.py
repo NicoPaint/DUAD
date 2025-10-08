@@ -2,6 +2,7 @@ import csv
 import os
 import ast
 import actions
+from Student import Student
 
 def validate_csv_file_name(action):
     while True:
@@ -91,8 +92,9 @@ def import_students_data(students_data):
                     elif key == "Promedio":
                         student_avg_float = float(student[key])
                         student[key] = student_avg_float
-
-                preview_students_data.append(student)
+                 
+                student_obj = Student(student)
+                preview_students_data.append(student_obj)
 
             if preview_students_data:
                 if not students_data:

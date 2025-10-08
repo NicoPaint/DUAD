@@ -172,7 +172,7 @@ def enter_students_info(students):
         science_grade = is_valid_grade(input("Nota de Ciencias: ").strip())
         student_avg = calculate_average([spanish_grade, english_grade, socials_grade, science_grade])
 
-        """ student = {
+        student_info = {
             "Nombre": student_name,
             "Sección": student_section,
             "Notas": {
@@ -182,9 +182,9 @@ def enter_students_info(students):
                 "Ciencias": science_grade
             },
             "Promedio": student_avg
-        } """
+        }
 
-        student = Student(student_name, student_section, spanish_grade, english_grade, socials_grade, science_grade, student_avg)
+        student = Student(student_info)
 
         if not review_student_information_submitted(student):
             continue
