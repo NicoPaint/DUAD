@@ -18,6 +18,7 @@ class Student:
         Promedio: {self.average}
         """
     
+
     def show_failed_subjects(self):
         print(f"Nombre: {self.name}")
         print(f"Sección: {self.section}")
@@ -25,3 +26,12 @@ class Student:
         for subject, grade in self.grades.items():
             if grade < 60:
                 print(f"\t{subject}: {grade}")
+    
+
+    def export_student_attributes_as_a_dictionary(self):
+        return {
+            "Nombre": self.name,
+            "Sección": self.section,
+            "Notas": self.grades,
+            "Promedio": self.average
+        }

@@ -47,6 +47,10 @@ def export_students_data(students_data):
         return None
 
     headers = ["Nombre", "Sección", "Notas", "Promedio"]
+    students_list = []
+    for student in students_data:
+        students_list.append(student.export_student_attributes_as_a_dictionary())
+
     file_name = validate_csv_file_name("exportar")
     file_path = f"./files/{file_name}.csv"
 
@@ -57,18 +61,18 @@ def export_students_data(students_data):
             with open(file_path, mode="w", encoding="utf-8") as file:
                 writer = csv.DictWriter(file, headers)
                 writer.writeheader()
-                writer.writerows(students_data)
+                writer.writerows(students_list)
         else:
             print(f"Anexando información al archivo {file_name}.csv ...")
             with open(file_path, mode="a", encoding="utf-8") as file:
                 writer = csv.DictWriter(file, headers)
-                writer.writerows(students_data)
+                writer.writerows(students_list)
     else:
         print(f"Creando archivo {file_name}.csv ...")
         with open(file_path, mode="w", encoding="utf-8") as file:
             writer = csv.DictWriter(file, headers)
             writer.writeheader()
-            writer.writerows(students_data)
+            writer.writerows(students_list)
     
     print(f"La información de los estudiantes ha sido exportada con exito al archivo {file_name}.csv en la ruta {file_path}")
 
