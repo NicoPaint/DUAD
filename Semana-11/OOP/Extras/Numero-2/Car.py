@@ -6,7 +6,7 @@ class Car:
 
     
     def accelerate(self, amount):
-        self.speed = amount
+        self.speed += amount
     
 
     def brake(self, amount):
