@@ -4,6 +4,8 @@ def function_data(func):
         print(*args)
         print(result)
 
+        return result
+
     return wrapper
 
 
