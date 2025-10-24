@@ -1,11 +1,11 @@
 user_logged_in = False
 
 def require_login(func):
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
         if not user_logged_in:
             raise ValueError("Usuario no autenticado")
         
-        return func(*args)
+        return func(*args, **kwargs)
     
     return wrapper
 
