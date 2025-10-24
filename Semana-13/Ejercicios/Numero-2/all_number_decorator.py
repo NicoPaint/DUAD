@@ -1,5 +1,5 @@
 def all_numbers(func):
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
         for arg in args:
             if isinstance(arg, list):
                 for item in arg:
@@ -11,7 +11,18 @@ def all_numbers(func):
                         raise ValueError("Los parametros de la función deben ser números (dict)")
             elif not isinstance(arg, (int, float, range)):
                 raise ValueError("Los parametros de la función deben ser números")
-        return func(*args)
+        for values in kwargs.values():
+            if isinstance(values, list):
+                for item in values:
+                    if not isinstance(item, (int, float)):
+                        raise ValueError("Los parametros de la función deben ser números (lista)")
+            elif isinstance(values, dict):
+                for value in values.values():
+                    if not isinstance(value, (int, float)):
+                        raise ValueError("Los parametros de la función deben ser números (dict)")
+            elif not isinstance(values, (int, float, range)):
+                raise ValueError("Los parametros de la función deben ser números")
+        return func(*args, **kwargs)
 
     return wrapper
 

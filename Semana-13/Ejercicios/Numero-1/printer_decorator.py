@@ -1,6 +1,6 @@
 def function_data(func):
-    def wrapper(*args):
-        result = func(*args)
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
         print(*args)
         print(result)
 

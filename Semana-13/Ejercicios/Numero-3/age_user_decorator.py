@@ -1,12 +1,12 @@
 from datetime import date
 
 def just_adults(func):
-    def wrapper(user, *args):
+    def wrapper(user, *args, **kwargs):
         if not isinstance(user, User):
             raise ValueError("La funcion debe tener un User como argumento")
         elif user.age < 18:
             raise ValueError("Lo sentimos, el usuario debe ser mayor de edad")
-        func(user, *args)
+        func(user, *args, **kwargs)
     
     return wrapper
 

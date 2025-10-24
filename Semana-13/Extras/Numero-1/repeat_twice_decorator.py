@@ -1,7 +1,7 @@
 def repeat_twice(func):
-    def wrapper(*args):
-        func(*args)
-        func(*args)
+    def wrapper(*args, **kwargs):
+        func(*args, **kwargs)
+        func(*args, **kwargs)
     
     return wrapper
 
