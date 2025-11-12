@@ -3,7 +3,7 @@ def bubble_sort(num_list):
     for outer_index in range(0, len(num_list) - 1): # O(n) -> n = len(num_list) - 1
         did_they_change = False # O(1)
 
-        for inner_index in range(0, len(num_list) - 1 - outer_index): # O((n(n+1))/2) -> n = len(num_list) - 1
+        for inner_index in range(0, len(num_list) - 1 - outer_index): # O((n^2) -> n = len(num_list) - 1
             current_num = num_list[inner_index] # O(1)
             next_num = num_list[inner_index + 1] # O(1)
 
@@ -18,7 +18,4 @@ def bubble_sort(num_list):
     return num_list # O(1)
 
 
-# debido a que en el segundo ciclo se va restando al extremo superior de acuerdo al ciclo externo, El Big O no es O(n^2) (cuadratica) sino una suma de Gauss, por lo que la notacion seria O((n(n+1))/2). Aqui esta mejor escrita la formula:
-# n(n+1)
-# -----
-#   2 
+# Por lo que bubble_sort es O(n^2).
